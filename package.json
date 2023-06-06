@@ -1,0 +1,22 @@
+{
+  "name": "art-archive-cli-application",
+  "version": "1.0.0",
+  "description": "add and update an art collection",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "inventory",
+    "collection",
+    "crud"
+  ],
+  "author": "RAWdevX21",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
+}
