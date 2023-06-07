@@ -4,7 +4,14 @@
   "description": "add and update an art collection",
   "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "start": "node app.js",
+    "create": "node app.js create",
+    "list": "node app.js list",
+    "details": "node app.js details",
+    "delete": "node app.js delete",
+    "update": "node app.js update",
+    "add-to-cart": "node app.js add-to-cart",
+    "cancel-cart": "node app.js cancel-cart"
   },
   "keywords": [
     "inventory",
