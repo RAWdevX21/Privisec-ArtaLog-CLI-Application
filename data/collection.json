@@ -22,6 +22,28 @@
     "image": "./assets/art-images/Beach Girls.jpg"
   },
   {
+    "id": "STO002ASS001",
+    "name": "Born To Fly",
+    "year": 2005,
+    "artist": "Suesan Stovall",
+    "medium": "assemblage",
+    "dimensions": "11 in x 14 in",
+    "venue": "Tunstull Studio",
+    "appraisalPriceInCents": 50000,
+    "image": "./assets/art-images/born to fly.jpg"
+  },
+  {
+    "id": "STO003ASS002",
+    "name": "Butterfly Quote",
+    "year": 2006,
+    "artist": "Suesan Stovall",
+    "medium": "assemblage",
+    "dimensions": "11 in x 14 in",
+    "venue": "Tunstull Studio",
+    "appraisalPriceInCents": 50000,
+    "image": "./assets/art-images/Butterfly Quote by Suesan Stovall.jpg"
+  },
+  {
     "id": "TUN004OIL004",
     "name": "Color Vortex",
     "year": 2007,
@@ -55,6 +77,17 @@
     "image": "./assets/art-images/Foggy Morning by Tunstull.jpg"
   },
   {
+    "id": "STO001COL001",
+    "name": "Learn Inner Peace",
+    "year": 2003,
+    "artist": "Suesan Stovall",
+    "medium": "collage",
+    "dimensions": "11.5 in x 8.5 in",
+    "venue": "Tunstull Studio",
+    "appraisalPriceInCents": 40000,
+    "image": "./assets/art-images/Learn Inner Peace.jpg"
+  },
+  {
     "id": "TUN001OIL001",
     "name": "Lounging",
     "year": 2013,
@@ -75,6 +108,17 @@
     "venue": "Tunstull Studio",
     "appraisalPriceInCents": 90000,
     "image": "./assets/art-images/Red Barn.jpg"
+  },
+  {
+    "id": "UNT001PAP001",
+    "name": "Untitled (2003)",
+    "year": 2003,
+    "artist": "Issac Aden",
+    "medium": "encaustic paint on paper",
+    "dimensions": "14 in x 18 in",
+    "venue": "Tunstull Studio",
+    "appraisalPriceInCents": 60000,
+    "image": "./assets/art-images/Untitled by Isaac Aden.jpg"
   },
   {
     "id": "TUN002OIL002",
