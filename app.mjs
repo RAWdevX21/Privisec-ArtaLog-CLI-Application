@@ -1,4 +1,11 @@
-import { readCollection, updateCollection } from "./src/helpers.mjs";
+import {
+  readCollection,
+  collectionFile,
+  readDeletedData,
+  deletedDataFile,
+  updateCollection,
+  updateDeletedData
+} from "./src/helpers.mjs";
 import {
   create,
   listWorks,
@@ -10,8 +17,9 @@ import {
 } from "./src/action-commands.mjs";
 
 const inform = console.log;
-const collectionData = readCollection();
-const artCollection = Array.isArray(collectionData) ? collectionData : [];
+collectionFile = readCollection();
+const artCollection = Array.isArray(collectionFile) ? collectionFile : [];
+deletedDataFile = readDeletedData();
 const action = process.argv[2].toLowerCase();
 
 function runApp() {

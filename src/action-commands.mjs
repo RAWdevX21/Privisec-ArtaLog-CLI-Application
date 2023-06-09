@@ -1,9 +1,17 @@
 import inquirer from "inquirer";
-import { readCollection, updateCollection } from "./helpers.mjs";
+import {
+  readCollection,
+  collectionFile,
+  readDeletedData,
+  deletedDataFile,
+  updateCollection,
+  updateDeletedData
+} from "./helpers.mjs";
 
 const inform = console.log;
-const collectionData = readCollection();
-const artCollection = Array.isArray(collectionData) ? collectionData : [];
+collectionFile = readCollection();
+const artCollection = Array.isArray(collectionFile) ? collectionFile : [];
+deletedDataFile = readDeletedData();
 const artworkNames = artCollection.map((artwork) => artwork.name);
 
 /*𒁍𒁁═══════════════════════════════════════════════════𒆰𒁄𒁈𒓱*/
@@ -150,39 +158,65 @@ function displayDetails(artwork) {
 // FUNCTION - to delete an artwork
 
 function deleteArtwork() {
-  // Create a list of artwork names for the user to choose from
-  const artworkNames = artCollection.map((artwork) => artwork.name);
+  if (artCollection.length === 0) {
+    console.log("No artworks found in the collection.");
+    return;
+  }
 
+  // Prompt the user to select an artwork to delete
   inquirer
     .prompt([
+      // Create a list of artwork names for the user to choose from
       {
         type: "list",
-        name: "artworkName",
+        name: "selectedArtwork",
         message: "Select an artwork to delete:",
-        choices: artworkNames
+        choices: artCollection.map((artwork) => artwork.name)
+      },
+      {
+        type: "confirm",
+        name: "confirmDelete",
+        message: "Are you sure you want to delete this artwork?",
+        default: false
       }
     ])
     .then((answers) => {
-      const { artworkName } = answers;
+      const { selectedArtwork, confirmDelete } = answers;
 
-      // Find the index of the artwork to delete
-      const indexToDelete = artCollection.findIndex(
-        (artwork) => artwork.name === artworkName
+      if (!confirmDelete) {
+        console.log("Delete operation cancelled.");
+        return;
+      }
+
+      const deletedArtwork = artCollection.find(
+        (artwork) => artwork.name === selectedArtwork
       );
 
-      if (indexToDelete !== -1) {
-        // Remove the artwork from the collection
-        const deletedArtwork = artCollection.splice(indexToDelete, 1)[0];
-        console.log(`Artwork "${deletedArtwork.name}" deleted successfully.`);
-
-        // Update the collection file
-        updateCollection(artCollection);
-      } else {
-        console.log(`Artwork "${artworkName}" not found.`);
+      if (!deletedArtwork) {
+        console.log("Selected artwork not found in the collection.");
+        return;
       }
+
+      // Add the selected artwork to deleted-works.json as a recovery method
+      try {
+        deletedDataFile.push(deletedArtwork);
+        updateDeletedData();
+        inform("Artwork added to deleted-works.json");
+      } catch (error) {
+        console.error(
+          "Error adding artwork to deleted-works.json:",
+          error.message
+        );
+      }
+
+      // Remove the selected artwork from collection.json
+      const updatedCollection = artCollection.filter(
+        (artwork) => artwork.name !== selectedArtwork
+      );
+      updateCollection(updatedCollection);
     })
     .catch((error) => {
-      console.error("Error deleting artwork:", error.message);
+      console.error("Error during artwork deletion:", error.message);
     });
 }
 /* --------------------------------------------------------- */
