@@ -2,7 +2,7 @@ import fs from "fs";
 const inform = console.log;
 const informErr = console.error;
 
-function readCollection() {
+function readCollectionFile() {
   try {
     const data = fs.readFileSync("./data/collection.json", {
       encoding: "utf8",
@@ -14,9 +14,22 @@ function readCollection() {
     return []; // Return empty array if file isn't found or can't be parsed;
   }
 }
-const collectionFile = readCollection();
 
-function readDeletedData() {
+//FIXME - const collectionFile = readCollectionFile();
+
+function updateCollectionFile(collection) {
+  try {
+    fs.writeFileSync(
+      "./data/collection.json",
+      JSON.stringify(collection, null, 2)
+    );
+    inform("Collection updated successfully.");
+  } catch (error) {
+    informErr("Error updating collection:", error.message);
+  }
+}
+
+function readDeletedDataFile() {
   try {
     const data = fs.readFileSync("./data/deleted-works.json", {
       encoding: "utf8",
@@ -28,25 +41,10 @@ function readDeletedData() {
     return []; // Return empty array if file isn't found or can't be parsed;
   }
 }
-const deletedDataFile = readDeletedData();
-/*
-The JSON.stringify is used to convert the JavaScript object back to a JSON 
-string with proper formatting (the third argument 2 specifies the number of 
-spaces for indentation).
-*/
-function updateCollection(collectionFile) {
-  try {
-    fs.writeFileSync(
-      "./data/collection.json",
-      JSON.stringify(collectionFile, null, 2)
-    );
-    inform("Collection updated successfully.");
-  } catch (error) {
-    informErr("Error updating collection:", error.message);
-  }
-}
 
-function updateDeletedData(deletedDataFile) {
+//FIXME - const deletedDataFile = readDeletedDataFile();
+
+function updateDeletedDataFile(deletedData) {
   try {
     fs.writeFileSync(
       "./data/deleted-works.json",
@@ -59,10 +57,8 @@ function updateDeletedData(deletedDataFile) {
 }
 
 export {
-  readCollection,
-  collectionFile,
-  readDeletedData,
-  deletedDataFile,
-  updateCollection,
-  updateDeletedData
+  readCollectionFile,
+  updateCollectionFile,
+  readDeletedDataFile,
+  updateDeletedDataFile
 };
