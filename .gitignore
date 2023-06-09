@@ -1,7 +1,9 @@
+.gitignore
 node_modules/
 .DS_Store
 .history/
 comm-hist.txt
+
 
 
 
