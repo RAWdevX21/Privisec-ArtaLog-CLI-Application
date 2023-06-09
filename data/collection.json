@@ -110,6 +110,17 @@
     "image": "./assets/art-images/Red Barn.jpg"
   },
   {
+    "id": "MOR001OIL006",
+    "name": "Three Pears",
+    "year": 2019,
+    "artist": "Mryna Morris",
+    "medium": "oil on canvas",
+    "dimensions": "17.5 in x 25.5 in",
+    "venue": "Tunstull Studio",
+    "appraisalPriceInCents": 50000,
+    "image": "./assets/art-images/three-pears.jpg"
+  },
+  {
     "id": "UNT001PAP001",
     "name": "Untitled (2003)",
     "year": 2003,
