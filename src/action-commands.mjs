@@ -9,6 +9,7 @@ import {
 } from "./helpers.mjs";
 
 const inform = console.log;
+const informErr = console.error;
 collectionFile = readCollection();
 const artCollection = Array.isArray(collectionFile) ? collectionFile : [];
 deletedDataFile = readDeletedData();
@@ -45,12 +46,14 @@ function create() {
       {
         type: "input",
         name: "medium",
-        message: "Enter the medium of the artwork:"
+        message: "Enter the medium of the artwork:",
+        default: "oil on canvas"
       },
       {
         type: "input",
         name: "dimensions",
-        message: "Enter the dimensions of the artwork:"
+        message: "Enter the dimensions of the artwork:",
+        default: "8.5 in x 11 in"
       },
       {
         type: "input",
@@ -65,7 +68,8 @@ function create() {
       {
         type: "input",
         name: "image",
-        message: "Enter the image path of the artwork:"
+        message: "Enter the image path of the artwork:",
+        default: "./assets/art-images/example-work.jpg"
       }
     ])
     .then((answers) => {
@@ -184,7 +188,7 @@ function deleteArtwork() {
       const { selectedArtwork, confirmDelete } = answers;
 
       if (!confirmDelete) {
-        console.log("Delete operation cancelled.");
+        inform("Delete operation cancelled.");
         return;
       }
 
@@ -193,7 +197,7 @@ function deleteArtwork() {
       );
 
       if (!deletedArtwork) {
-        console.log("Selected artwork not found in the collection.");
+        inform("Selected artwork not found in the collection.");
         return;
       }
 
@@ -203,10 +207,7 @@ function deleteArtwork() {
         updateDeletedData();
         inform("Artwork added to deleted-works.json");
       } catch (error) {
-        console.error(
-          "Error adding artwork to deleted-works.json:",
-          error.message
-        );
+        informErr("Error adding artwork to deleted-works.json:", error.message);
       }
 
       // Remove the selected artwork from collection.json
@@ -216,7 +217,7 @@ function deleteArtwork() {
       updateCollection(updatedCollection);
     })
     .catch((error) => {
-      console.error("Error during artwork deletion:", error.message);
+      informErr("Error during artwork deletion:", error.message);
     });
 }
 /* --------------------------------------------------------- */

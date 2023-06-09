@@ -23,13 +23,35 @@
   },
   {
     "id": "TUN001OIL001",
-    "name": "Walk with Me",
+    "name": "Foggy Morning",
+    "year": 2005,
+    "artist": "Glenn Tunstull",
+    "medium": "watercolor",
+    "dimensions": "5.75 in x 7.25 in",
+    "venue": "Cousen Rose Gallery",
+    "appraisalPriceInCents": 180000,
+    "image": "./assets/art-images/Foggy Morning by Tunstull.jpg"
+  },
+  {
+    "id": "TUN001OIL001",
+    "name": "Lounging",
     "year": 2013,
     "artist": "Glenn Tunstull",
     "medium": "oil on canvas",
     "dimensions": "48 in x 24 in",
-    "venue": "Cousen Rose Gallery",
+    "venue": "Tunstull Studio",
     "appraisalPriceInCents": 650000,
+    "image": "./assets/art-images/Walk with Me by Tunstull.jpg"
+  },
+  {
+    "id": "TUN002OIL002",
+    "name": "Walk with Me",
+    "year": 2014,
+    "artist": "Glenn Tunstull",
+    "medium": "oil on canvas",
+    "dimensions": "24 in x 18 in",
+    "venue": "Cousen Rose Gallery",
+    "appraisalPriceInCents": 500000,
     "image": "./assets/art-images/Walk with Me by Tunstull.jpg"
   }
 ]

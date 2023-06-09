@@ -29,7 +29,6 @@
   "type": "module",
   "dependencies": {
     "chalk": "^5.2.0",
-    "fs": "^0.0.1-security",
-    "yargs": "^17.7.2"
+    "fs": "^0.0.1-security"
   }
 }
