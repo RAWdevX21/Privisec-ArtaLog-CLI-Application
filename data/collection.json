@@ -1,0 +1,46 @@
+[
+  {
+    "id": "ROS001PHO001",
+    "name": "Allium",
+    "year": 2013,
+    "artist": "Uli Rose",
+    "medium": "color photograph",
+    "dimensions": "18.5 in x 12.5 in",
+    "venue": "Rose Gallery",
+    "appraisalPriceInCents": 50000,
+    "image": "./assets/art-images/Allium by Uli Rose.jpg"
+  },
+  {
+    "id": "DEN001COL001",
+    "name": "Fancy Shirt",
+    "year": 2007,
+    "artist": "James Denmark",
+    "medium": "collage",
+    "dimensions": "5.75 in x 7.25 in",
+    "venue": "Tunstull Studio",
+    "appraisalPriceInCents": 200000,
+    "image": "./assets/art-images/Fancy Shirt.jpg"
+  },
+  {
+    "id": "TUN001OIL001",
+    "name": "Walk with Me",
+    "year": 2013,
+    "artist": "Glenn Tunstull",
+    "medium": "oil on canvas",
+    "dimensions": "48 in x 24 in",
+    "venue": "Cousen Rose Gallery",
+    "appraisalPriceInCents": 650000,
+    "image": "./assets/art-images/Walk with Me by Tunstull.jpg"
+  },
+  {
+    "id": "TUN002OIL002",
+    "name": "Lounging Chairs",
+    "year": "2013",
+    "artist": "Glenn Tunstull",
+    "medium": "oil on canvas",
+    "dimensions": "48 in x 24 in",
+    "venue": "Tunstull Studio",
+    "appraisalPriceInCents": 650000,
+    "image": "./assets/art-images/Lounging.jpg"
+  }
+]
