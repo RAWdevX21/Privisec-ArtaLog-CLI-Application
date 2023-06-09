@@ -8,7 +8,7 @@
     "dimensions": "18.5 in x 12.5 in",
     "venue": "Rose Gallery",
     "appraisalPriceInCents": 50000,
-    "image": "./assets/art-images/Allium by Uli Rose.jpg"
+    "image": "./assets/art-images/Allium-by-Uli-Rose.jpg"
   },
   {
     "id": "TUN003OIL003",
@@ -19,7 +19,7 @@
     "dimensions": "24 in x 30 in",
     "venue": "Tunstull Studio",
     "appraisalPriceInCents": 450000,
-    "image": "./assets/art-images/Beach Girls.jpg"
+    "image": "./assets/art-images/Beach-Girls.jpg"
   },
   {
     "id": "STO002ASS001",
@@ -30,7 +30,7 @@
     "dimensions": "11 in x 14 in",
     "venue": "Tunstull Studio",
     "appraisalPriceInCents": 50000,
-    "image": "./assets/art-images/born to fly.jpg"
+    "image": "./assets/art-images/Born-To-Fly.jpg"
   },
   {
     "id": "STO003ASS002",
@@ -41,7 +41,7 @@
     "dimensions": "11 in x 14 in",
     "venue": "Tunstull Studio",
     "appraisalPriceInCents": 50000,
-    "image": "./assets/art-images/Butterfly Quote by Suesan Stovall.jpg"
+    "image": "./assets/art-images/Butterfly-Quote-by-Suesan-Stovall.jpg"
   },
   {
     "id": "TUN004OIL004",
@@ -52,7 +52,7 @@
     "dimensions": "27.5 in x 19.5 in",
     "venue": "Tunstull Studio",
     "appraisalPriceInCents": 280000,
-    "image": "./assets/art-images/Color Vortex.jpg"
+    "image": "./assets/art-images/Color-Vortex.jpg"
   },
   {
     "id": "DEN001COL001",
@@ -63,7 +63,7 @@
     "dimensions": "5.75 in x 7.25 in",
     "venue": "Tunstull Studio",
     "appraisalPriceInCents": 200000,
-    "image": "./assets/art-images/Fancy Shirt.jpg"
+    "image": "./assets/art-images/Fancy-Shirt.jpg"
   },
   {
     "id": "TUN001OIL001",
@@ -74,7 +74,7 @@
     "dimensions": "5.75 in x 7.25 in",
     "venue": "Cousen Rose Gallery",
     "appraisalPriceInCents": 180000,
-    "image": "./assets/art-images/Foggy Morning by Tunstull.jpg"
+    "image": "./assets/art-images/Foggy-Morning-by-Tunstull.jpg"
   },
   {
     "id": "STO001COL001",
@@ -85,10 +85,10 @@
     "dimensions": "11.5 in x 8.5 in",
     "venue": "Tunstull Studio",
     "appraisalPriceInCents": 40000,
-    "image": "./assets/art-images/Learn Inner Peace.jpg"
+    "image": "./assets/art-images/Learn-Inner-Peace.jpg"
   },
   {
-    "id": "TUN001OIL001",
+    "id": "TUN002OIL002",
     "name": "Lounging",
     "year": 2013,
     "artist": "Glenn Tunstull",
@@ -96,7 +96,7 @@
     "dimensions": "48 in x 24 in",
     "venue": "Tunstull Studio",
     "appraisalPriceInCents": 650000,
-    "image": "./assets/art-images/Walk with Me by Tunstull.jpg"
+    "image": "./assets/art-images/Lounging-by-Tunstull.jpg"
   },
   {
     "id": "TUN005OIL005",
@@ -107,7 +107,7 @@
     "dimensions": "16 in x 12 in",
     "venue": "Tunstull Studio",
     "appraisalPriceInCents": 90000,
-    "image": "./assets/art-images/Red Barn.jpg"
+    "image": "./assets/art-images/Red-Barn.jpg"
   },
   {
     "id": "MOR001OIL006",
@@ -118,7 +118,7 @@
     "dimensions": "17.5 in x 25.5 in",
     "venue": "Tunstull Studio",
     "appraisalPriceInCents": 50000,
-    "image": "./assets/art-images/three-pears.jpg"
+    "image": "./assets/art-images/Three-Pears.jpg"
   },
   {
     "id": "UNT001PAP001",
@@ -129,17 +129,6 @@
     "dimensions": "14 in x 18 in",
     "venue": "Tunstull Studio",
     "appraisalPriceInCents": 60000,
-    "image": "./assets/art-images/Untitled by Isaac Aden.jpg"
-  },
-  {
-    "id": "TUN002OIL002",
-    "name": "Walk with Me",
-    "year": 2014,
-    "artist": "Glenn Tunstull",
-    "medium": "oil on canvas",
-    "dimensions": "24 in x 18 in",
-    "venue": "Cousen Rose Gallery",
-    "appraisalPriceInCents": 500000,
-    "image": "./assets/art-images/Walk with Me by Tunstull.jpg"
+    "image": "./assets/art-images/Untitled-by-Isaac-Aden.jpg"
   }
 ]
