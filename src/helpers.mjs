@@ -2,7 +2,7 @@ import fs from "fs";
 const inform = console.log;
 const informErr = console.error;
 
-function readCollectionFile() {
+function readCollection() {
   try {
     const data = fs.readFileSync("./data/collection.json", {
       encoding: "utf8",
@@ -15,9 +15,9 @@ function readCollectionFile() {
   }
 }
 
-//FIXME - const collectionFile = readCollectionFile();
+let collectionFile = readCollection();
 
-function updateCollectionFile(collection) {
+function updateCollection(collection) {
   try {
     fs.writeFileSync(
       "./data/collection.json",
@@ -29,7 +29,7 @@ function updateCollectionFile(collection) {
   }
 }
 
-function readDeletedDataFile() {
+function readDeletedCollection() {
   try {
     const data = fs.readFileSync("./data/deleted-works.json", {
       encoding: "utf8",
@@ -42,9 +42,9 @@ function readDeletedDataFile() {
   }
 }
 
-//FIXME - const deletedDataFile = readDeletedDataFile();
+let deletedDataFile = readDeletedCollection();
 
-function updateDeletedDataFile(deletedData) {
+function updateDeletedCollection(deletedData) {
   try {
     fs.writeFileSync(
       "./data/deleted-works.json",
@@ -57,8 +57,10 @@ function updateDeletedDataFile(deletedData) {
 }
 
 export {
-  readCollectionFile,
-  updateCollectionFile,
-  readDeletedDataFile,
-  updateDeletedDataFile
+  readCollection,
+  collectionFile,
+  updateCollection,
+  readDeletedCollection,
+  deletedDataFile,
+  updateDeletedCollection
 };

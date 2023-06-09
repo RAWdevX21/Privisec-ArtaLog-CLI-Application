@@ -1,18 +1,16 @@
 import inquirer from "inquirer";
 import {
   readCollection,
-  collectionFile,
-  readDeletedData,
-  deletedDataFile,
   updateCollection,
-  updateDeletedData
+  readDeletedCollection,
+  updateDeletedCollection
 } from "./helpers.mjs";
 
 const inform = console.log;
 const informErr = console.error;
-collectionFile = readCollection();
-const artCollection = Array.isArray(collectionFile) ? collectionFile : [];
-deletedDataFile = readDeletedData();
+//collectionFile = readCollection();
+const artCollection = readCollection();
+//deletedDataFile = readDeletedCollection();
 const artworkNames = artCollection.map((artwork) => artwork.name);
 
 /*𒁍𒁁═══════════════════════════════════════════════════𒆰𒁄𒁈𒓱*/
@@ -175,7 +173,7 @@ function deleteArtwork() {
         type: "list",
         name: "selectedArtwork",
         message: "Select an artwork to delete:",
-        choices: artCollection.map((artwork) => artwork.name)
+        choices: artworkNames
       },
       {
         type: "confirm",
@@ -203,11 +201,13 @@ function deleteArtwork() {
 
       // Add the selected artwork to deleted-works.json as a recovery method
       try {
+        const deletedDataFile = readDeletedCollection();
         deletedDataFile.push(deletedArtwork);
-        updateDeletedData();
+        updateDeletedCollection(deletedDataFile);
         inform("Artwork added to deleted-works.json");
       } catch (error) {
         informErr("Error adding artwork to deleted-works.json:", error.message);
+        return;
       }
 
       // Remove the selected artwork from collection.json
@@ -215,6 +215,8 @@ function deleteArtwork() {
         (artwork) => artwork.name !== selectedArtwork
       );
       updateCollection(updatedCollection);
+
+      inform("Artwork deleted successfully.");
     })
     .catch((error) => {
       informErr("Error during artwork deletion:", error.message);
