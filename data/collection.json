@@ -31,16 +31,5 @@
     "venue": "Cousen Rose Gallery",
     "appraisalPriceInCents": 650000,
     "image": "./assets/art-images/Walk with Me by Tunstull.jpg"
-  },
-  {
-    "id": "TUN002OIL002",
-    "name": "Lounging Chairs",
-    "year": "2013",
-    "artist": "Glenn Tunstull",
-    "medium": "oil on canvas",
-    "dimensions": "48 in x 24 in",
-    "venue": "Tunstull Studio",
-    "appraisalPriceInCents": 650000,
-    "image": "./assets/art-images/Lounging.jpg"
   }
 ]

@@ -1,11 +1,16 @@
 import inquirer from "inquirer";
 import { readCollection, updateCollection } from "./helpers.mjs";
-const inform = console.log;
 
-// Function to create a new artwork
+const inform = console.log;
+const collectionData = readCollection();
+const artCollection = Array.isArray(collectionData) ? collectionData : [];
+const artworkNames = artCollection.map((artwork) => artwork.name);
+
+/*𒁍𒁁═══════════════════════════════════════════════════𒆰𒁄𒁈𒓱*/
+// FUNCTION -  to create & add new artpiece
+
 function create() {
   const nameOfArtwork = process.argv.splice(3).join(" ");
-  inform("This is the name of the artpiece: " + nameOfArtwork);
   return inquirer
     .prompt([
       {
@@ -79,44 +84,127 @@ function create() {
         image
       };
 
-      const collection = readCollection();
-      collection.push(newArtwork);
-      updateCollection(collection);
-
+      artCollection.push(newArtwork);
       console.log("Artwork created successfully!");
+
+      updateCollection(artCollection);
     });
 }
+/* --------------------------------------------------------- */
+// FUNCTION - to display details of a specific artwork
 
-// Function to list all artworks
+function displayDetails(artwork) {
+  // if the user provides the id or name of artwork, then it returns the artpiece
+  let artDetails = {};
+  const selection = [];
+
+  if (artwork.length !== 0) {
+    const foundArtwork = artCollection.find((artpiece) => {
+      return artwork === artpiece.id || artwork === artpiece.name;
+    });
+
+    if (foundArtwork) {
+      artDetails = { ...foundArtwork };
+      inform(JSON.parse(JSON.stringify(artDetails)));
+    } else {
+      inform(
+        "This artpiece does not exist in the Collection. Try to 'create' this piece as new artwork"
+      );
+    }
+    return artDetails;
+  }
+
+  /* if the user doesn't provide the id or name, by default, a list of artpieces are provided to choose from
+   */
+  return inquirer
+    .prompt([
+      {
+        type: "list",
+        name: "title",
+        message: "Select one of the following artpieces to display.",
+        choices: artworkNames
+      },
+      {
+        type: "confirm",
+        name: "askAgain",
+        message:
+          "Want to select another artpiece to display (hit enter for YES)?",
+        default: true
+      }
+    ])
+    .then((answers) => {
+      artDetails = inform(
+        JSON.parse(
+          JSON.stringify({
+            ...artCollection.find((artpiece) => answers.title === artpiece.name)
+          })
+        )
+      );
+      selection.push(artDetails);
+      if (answers.askAgain) {
+        displayDetails(artwork);
+      }
+    });
+}
+/* --------------------------------------------------------- */
+// FUNCTION - to delete an artwork
+
+function deleteArtwork() {
+  // Create a list of artwork names for the user to choose from
+  const artworkNames = artCollection.map((artwork) => artwork.name);
+
+  inquirer
+    .prompt([
+      {
+        type: "list",
+        name: "artworkName",
+        message: "Select an artwork to delete:",
+        choices: artworkNames
+      }
+    ])
+    .then((answers) => {
+      const { artworkName } = answers;
+
+      // Find the index of the artwork to delete
+      const indexToDelete = artCollection.findIndex(
+        (artwork) => artwork.name === artworkName
+      );
+
+      if (indexToDelete !== -1) {
+        // Remove the artwork from the collection
+        const deletedArtwork = artCollection.splice(indexToDelete, 1)[0];
+        console.log(`Artwork "${deletedArtwork.name}" deleted successfully.`);
+
+        // Update the collection file
+        updateCollection(artCollection);
+      } else {
+        console.log(`Artwork "${artworkName}" not found.`);
+      }
+    })
+    .catch((error) => {
+      console.error("Error deleting artwork:", error.message);
+    });
+}
+/* --------------------------------------------------------- */
+// FUNCTION - to list all artworks
+
 function listWorks() {
-  const collection = readCollection();
-
-  if (collection.length === 0) {
-    console.log("No artworks found.");
+  if (artCollection.length === 0) {
+    inform("No artworks found.");
   } else {
-    console.log("Artworks:");
-    collection.forEach((artwork) => {
-      console.log(`- ${artwork.name} (${artwork.artist})`);
+    inform("Artworks: ");
+    artCollection.forEach((artwork) => {
+      const price = `$${artwork.appraisalPriceInCents / 100}`;
+      inform(`
+      ➣ ${artwork.name} by ${artwork.artist} (${artwork.year})
+        - medium: ${artwork.medium}
+        - appraisal value: ${price}`);
     });
   }
 }
+/* --------------------------------------------------------- */
+// FUNCTION - to update an artwork
 
-// Function to display details of a specific artwork
-function displayDetails() {
-  // Prompt the user to select an artwork from a list or enter the artwork's id/name
-  // Retrieve the selected artwork from the collection and display its details
-  // Handle cases where the artwork is not found
-}
-
-// Function to delete an artwork
-function deleteWork() {
-  // Prompt the user to select an artwork from a list or enter the artwork's id/name
-  // Remove the selected artwork from the collection
-  // Handle cases where the artwork is not found
-  // Update the collection file
-}
-
-// Function to update an artwork
 function updateWork() {
   // Prompt the user to select an artwork from a list or enter the artwork's id/name
   // Prompt the user for the updated details of the artwork
@@ -124,11 +212,24 @@ function updateWork() {
   // Handle cases where the artwork is not found
   // Update the collection file
 }
+/* --------------------------------------------------------- */
+// FUNCTION - to add an artwork to the cart
 
-// Function to add an artwork to the cart
 function addToCart() {
   // Prompt the user to select an artwork from a list or enter the artwork's id/name
   // Add the selected artwork to the cart.
 }
+/* --------------------------------------------------------- */
+// FUNCTION - to cancel cart items
 
-export { create, listWorks, displayDetails, deleteWork, updateWork, addToCart };
+function cancelCart() {}
+/*𒁍𒁁═══════════════════════════════════════════════════𒆰𒁄𒁈𒓱*/
+export {
+  create,
+  listWorks,
+  displayDetails,
+  deleteArtwork,
+  updateWork,
+  addToCart,
+  cancelCart
+};
