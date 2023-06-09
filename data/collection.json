@@ -11,6 +11,28 @@
     "image": "./assets/art-images/Allium by Uli Rose.jpg"
   },
   {
+    "id": "TUN003OIL003",
+    "name": "Beach Girls",
+    "year": 2014,
+    "artist": "Glenn Tunstull",
+    "medium": "oil on canvas",
+    "dimensions": "24 in x 30 in",
+    "venue": "Tunstull Studio",
+    "appraisalPriceInCents": 450000,
+    "image": "./assets/art-images/Beach Girls.jpg"
+  },
+  {
+    "id": "TUN004OIL004",
+    "name": "Color Vortex",
+    "year": 2007,
+    "artist": "Glenn Tunstull",
+    "medium": "oil on canvas",
+    "dimensions": "27.5 in x 19.5 in",
+    "venue": "Tunstull Studio",
+    "appraisalPriceInCents": 280000,
+    "image": "./assets/art-images/Color Vortex.jpg"
+  },
+  {
     "id": "DEN001COL001",
     "name": "Fancy Shirt",
     "year": 2007,
@@ -42,6 +64,17 @@
     "venue": "Tunstull Studio",
     "appraisalPriceInCents": 650000,
     "image": "./assets/art-images/Walk with Me by Tunstull.jpg"
+  },
+  {
+    "id": "TUN005OIL005",
+    "name": "Red Barn",
+    "year": 2006,
+    "artist": "Glenn Tunstull",
+    "medium": "oil on canvas",
+    "dimensions": "16 in x 12 in",
+    "venue": "Tunstull Studio",
+    "appraisalPriceInCents": 90000,
+    "image": "./assets/art-images/Red Barn.jpg"
   },
   {
     "id": "TUN002OIL002",
