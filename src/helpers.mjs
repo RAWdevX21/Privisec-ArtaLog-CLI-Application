@@ -31,7 +31,7 @@ function updateCollection(collection) {
 
 function readDeletedCollection() {
   try {
-    const data = fs.readFileSync("./data/deleted-works.json", {
+    const data = fs.readFileSync("./data/deleted-works-recovery.json", {
       encoding: "utf8",
       flag: "r"
     });
@@ -47,7 +47,7 @@ let deletedDataFile = readDeletedCollection();
 function updateDeletedCollection(deletedData) {
   try {
     fs.writeFileSync(
-      "./data/deleted-works.json",
+      "./data/deleted-works-recovery.json",
       JSON.stringify(deletedData, null, 2)
     );
     inform("Deleted data updated successfully.");
