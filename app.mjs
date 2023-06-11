@@ -1,23 +1,16 @@
 import {
-  readCollection,
-  updateCollection,
-  readDeletedCollection,
-  updateDeletedCollection
-} from "./src/helpers.mjs";
-import {
   create,
-  listWorks,
-  displayDetails,
-  deleteArtwork,
-  updateWork,
-  addToCart,
-  cancelCart
-} from "./src/action-commands.mjs";
+  show,
+  list,
+  filter,
+  destroy,
+  update,
+  newCart,
+  add,
+  cancel
+} from "./src/commands.mjs";
 
 const inform = console.log;
-//collectionFile = readCollection();
-const artCollection = readCollection();
-//deletedDataFile = readDeletedCollection();
 const action = process.argv[2].toLowerCase();
 
 function runApp() {
@@ -25,23 +18,29 @@ function runApp() {
     case "create":
       create();
       break;
-    case "display":
-      displayDetails(process.argv.splice(3).join(" "));
-      break;
-    case "delete":
-      deleteArtwork();
+    case "show":
+      show(process.argv.splice(3).join(" "));
       break;
     case "list":
-      listWorks();
+      list();
+      break;
+    case "filter":
+      filter();
+      break;
+    case "delete":
+      destroy();
       break;
     case "update":
-      updateWork();
+      update();
+      break;
+    case "new-cart":
+      newCart();
       break;
     case "add":
-      addToCart();
+      add();
       break;
     case "cancel":
-      cancelCart();
+      cancel();
       break;
     default:
       inform("The action command was not provided");

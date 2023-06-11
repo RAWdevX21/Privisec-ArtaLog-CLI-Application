@@ -6,12 +6,14 @@
   "scripts": {
     "start": "node app.mjs",
     "create": "node app.mjs create",
+    "show": "node app.mjs show",
     "list": "node app.mjs list",
-    "details": "node app.mjs details",
+    "filter": "node app.mjs filter",
     "delete": "node app.mjs delete",
     "update": "node app.mjs update",
-    "add-to-cart": "node app.mjs add-to-cart",
-    "cancel-cart": "node app.mjs cancel-cart",
+    "new-cart": "node app.mjs new-cart",
+    "add": "node app.mjs add",
+    "cancel": "node app.mjs cancel",
     "test": "jest"
   },
   "keywords": [
@@ -19,7 +21,7 @@
     "collection",
     "crud"
   ],
-  "author": "RAWdevX21",
+  "author": "Ricon Wrenn (RAWdevX21)",
   "license": "MIT",
   "devDependencies": {
     "inquirer": "^9.2.7",
