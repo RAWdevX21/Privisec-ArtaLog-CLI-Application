@@ -4,7 +4,7 @@ import {
   updateCollection,
   readDeletedCollection,
   updateDeletedCollection
-} from "../helpers";
+} from "../helpers.mjs";
 
 const inform = console.log;
 const informErr = console.error;
@@ -59,7 +59,6 @@ function deleteArtwork() {
         const deletedDataFile = readDeletedCollection();
         deletedDataFile.push(deletedArtwork);
         updateDeletedCollection(deletedDataFile);
-        inform("Artwork added to deleted-works.json");
       } catch (error) {
         informErr("Error adding artwork to deleted-works.json:", error.message);
         return;

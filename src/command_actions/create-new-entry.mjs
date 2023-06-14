@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import { readCollection, updateCollection } from "../helpers";
+import { readCollection, updateCollection } from "../helpers.mjs";
 
 const inform = console.log;
 const informErr = console.error;
