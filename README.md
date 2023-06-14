@@ -1,4 +1,4 @@
-# <span style="font-size: 35;font-weight: bold; color: DodgerBlue;">A<span style="font-size: 22; color: DeepSkyBlue;">RCH</span><span style="font-size: 22;">W</span><span style="font-size: 22; color: DeepSkyBlue;">ORK</span></span><br><span style="font-size: 20px; color: DeepSkyBlue;"><sup>A Command Line Inventory Application</sup></span>
+# <span style="font-size: 35;font-weight: bold; color: DodgerBlue;">A<span style="font-size: 22; color: DeepSkyBlue;">RCH</span><span style="font-size: 22;">W</span><span style="font-size: 22; color: DeepSkyBlue;">ORK</span></span><br><span style="font-size: 16px; color: DeepSkyBlue;"><sup>A Command Line Inventory Application</sup></span>
 
 Archwork is a command line inventory program designed to revolutionize the way you manage your art collection through the _command-line interface (CLI)_. Derived from the words "**_arch_**ive" and "art**_work_**," this app embodies the power and essence of archiving with the artistry of organization. Whether you're an artist, collector, or enthusiast, Archwork provides a seamless experience while empowering you to effortlessly catalog and maintain your valuable **Archwork**.<hr>
 
