@@ -4,7 +4,7 @@ import {
   updateCollection,
   readDeletedCollection,
   updateDeletedCollection
-} from "../helpers.mjs";
+} from "../helpers.js";
 
 const inform = console.log;
 const informErr = console.error;
@@ -14,7 +14,7 @@ const artworkNames = artCollection.map((artwork) => artwork.name);
 /*𒁍𒁁═══════════════════════════════════════════════════𒆰𒁄𒁈𒓱*/
 // FUNCTION - to list all artworks
 
-function listAllWorks() {
+export default async function listAllWorks() {
   if (artCollection.length === 0) {
     inform("No artworks found.");
   } else {
@@ -28,5 +28,3 @@ function listAllWorks() {
     });
   }
 }
-/* --------------------------------------------------------- */
-export { listAllWorks };

@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import { readCollection, updateCollection } from "../helpers.mjs";
+import { readCollection, updateCollection } from "../helpers.js";
 
 const inform = console.log;
 const informErr = console.error;
@@ -9,7 +9,7 @@ const artworkNames = artCollection.map((artwork) => artwork.name);
 /*𒁍𒁁═══════════════════════════════════════════════════𒆰𒁄𒁈𒓱*/
 // FUNCTION -  to create & add new artpiece
 
-function createNewEntry() {
+export default async function createNewEntry() {
   const nameOfArtwork = process.argv.splice(3).join(" ");
   return inquirer
     .prompt([
@@ -93,5 +93,3 @@ function createNewEntry() {
       updateCollection(artCollection);
     });
 }
-/* --------------------------------------------------------- */
-export { createNewEntry };

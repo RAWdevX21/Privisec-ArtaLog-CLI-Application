@@ -4,7 +4,7 @@ import {
   updateCollection,
   readDeletedCollection,
   updateDeletedCollection
-} from "../helpers.mjs";
+} from "../helpers.js";
 
 const inform = console.log;
 const informErr = console.error;
@@ -14,7 +14,7 @@ const artworkNames = artCollection.map((artwork) => artwork.name);
 /*𒁍𒁁═══════════════════════════════════════════════════𒆰𒁄𒁈𒓱*/
 // FUNCTION - to delete artwork specified by the user
 
-function deleteArtwork() {
+export default async function deleteArtwork() {
   if (artCollection.length === 0) {
     console.log("No artworks found in the collection.");
     return;
@@ -76,5 +76,3 @@ function deleteArtwork() {
       informErr("Error during artwork deletion:", error.message);
     });
 }
-/* --------------------------------------------------------- */
-export { deleteArtwork };

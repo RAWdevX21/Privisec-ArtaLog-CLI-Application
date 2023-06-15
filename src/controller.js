@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import { readCollection, updateCollection } from "./helpers.mjs";
+import { readCollection, updateCollection } from "./helpers.js";
 import {
   create,
   listWorks,
@@ -7,7 +7,7 @@ import {
   deleteWork,
   updateWork,
   addToCart
-} from "./action-commands.mjs";
+} from "./action-commands.js";
 
 const inform = console.log;
 inform("this is process.argv: " + process.argv);

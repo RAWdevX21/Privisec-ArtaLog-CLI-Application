@@ -2,18 +2,18 @@
   "name": "art-archive-cli-application",
   "version": "1.0.0",
   "description": "add and update an art collection",
-  "main": "app.mjs",
+  "main": "app.js",
   "scripts": {
-    "start": "node app.mjs",
-    "create": "node app.mjs create",
-    "show": "node app.mjs show",
-    "list": "node app.mjs list",
-    "filter": "node app.mjs filter",
-    "delete": "node app.mjs delete",
-    "update": "node app.mjs update",
-    "new-cart": "node app.mjs new-cart",
-    "add": "node app.mjs add",
-    "cancel": "node app.mjs cancel",
+    "start": "node app.js",
+    "create": "node app.js create",
+    "show": "node app.js show",
+    "list": "node app.js list",
+    "filter": "node app.js filter",
+    "delete": "node app.js delete",
+    "update": "node app.js update",
+    "new-cart": "node app.js new-cart",
+    "add": "node app.js add",
+    "cancel": "node app.js cancel",
     "test": "jest"
   },
   "keywords": [
@@ -23,12 +23,12 @@
   ],
   "author": "Ricon Wrenn (RAWdevX21)",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "inquirer": "^9.2.7",
     "jest": "^29.5.0",
     "nanoid": "^4.0.2"
   },
-  "type": "module",
   "dependencies": {
     "chalk": "^5.2.0",
     "fs": "^0.0.1-security"

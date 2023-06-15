@@ -4,16 +4,19 @@ import {
   updateCollection,
   readDeletedCollection,
   updateDeletedCollection
-} from "../helpers.mjs";
+} from "../helpers.js";
 
 const inform = console.log;
 const informErr = console.error;
 const artCollection = readCollection();
 const artworkNames = artCollection.map((artwork) => artwork.name);
-
 /*𒁍𒁁═══════════════════════════════════════════════════𒆰𒁄𒁈𒓱*/
-// FUNCTION - creates a new cart for the user
+// FUNCTION - prompts the user to select an artpiece or provide the title to update
 
-function createNewCart() {}
-/* --------------------------------------------------------- */
-export { createNewCart };
+export default async function updateArtwork() {
+  // Prompt the user to select an artwork from a list or enter the artwork's id/name
+  // Prompt the user for the updated details of the artwork
+  // Update the selected artwork in the collection
+  // Handle cases where the artwork is not found
+  // Update the collection file
+}

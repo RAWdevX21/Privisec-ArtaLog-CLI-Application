@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import { readCollection } from "../helpers.mjs";
+import { readCollection } from "../helpers.js";
 
 const inform = console.log;
 const artCollection = readCollection();
@@ -8,7 +8,7 @@ const artworkNames = artCollection.map((artwork) => artwork.name);
 /*𒁍𒁁═══════════════════════════════════════════════════𒆰𒁄𒁈𒓱*/
 // FUNCTION - to display details of a specific artwork
 
-function displayArtworkDetails(artwork) {
+export default async function displayArtworkDetails(artwork) {
   // if the user provides the id or name of artwork, then it returns the artpiece
   let artDetails = {};
   const selection = [];
@@ -61,5 +61,3 @@ function displayArtworkDetails(artwork) {
       }
     });
 }
-/* --------------------------------------------------------- */
-export { displayArtworkDetails };
