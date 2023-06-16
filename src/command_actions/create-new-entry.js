@@ -9,8 +9,7 @@ const artworkNames = artCollection.map((artwork) => artwork.name);
 /*𒁍𒁁═══════════════════════════════════════════════════𒆰𒁄𒁈𒓱*/
 // FUNCTION -  to create & add new artpiece
 
-export default async function createNewEntry() {
-  const nameOfArtwork = process.argv.splice(3).join(" ");
+export default async function createNewEntry(title) {
   return inquirer
     .prompt([
       {
@@ -22,7 +21,7 @@ export default async function createNewEntry() {
         type: "input",
         name: "name",
         message: "Enter the name of the artwork:",
-        default: nameOfArtwork
+        default: title
       },
       {
         type: "input",
