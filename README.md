@@ -48,8 +48,9 @@ Managing a sizeable art collection can be a daunting task, but the <strong>PAL c
 - Simplifying complexities in estate planning and ownership transfers through clear inventory documentation.
 
 </details>
----
+<br>
 
+---
 ## What is this app for?
 
 **Privisec Artalog** is the result of our commitment to providing an efficient inventory management system without the hefty price tag. It empowers you to document and track essential information for each artwork in your collection. From artists and titles to mediums, dimensions, descriptions, and even appraisal valuations, the _**PAL** companion_ covers it all.
@@ -61,12 +62,13 @@ PAL is here to revolutionize the way you manage your art collection. With the ar
 Get ready to unleash the full potential of your art collection with the **Privisec ArtaLog** companion.
 
  ***"Welcome to a new era of art management excellence!"*** 
+
 <br>
 
 ---
 ## Getting Started
 
-### **Download Instructions**
+### Download instructions
 
 To install _**Privisec ArtaLog** companion_ on your local machine, follow these steps:</p>
 
@@ -94,7 +96,7 @@ To install _**Privisec ArtaLog** companion_ on your local machine, follow these 
    $ pal launch setup
    ```
 
-### **Profile Setup and Login**
+### Profile setup and login
 Get started here with ***Privisec ArtaLog***.
 
 1. Run this script to create a secure user profile.
@@ -117,16 +119,23 @@ Get started here with ***Privisec ArtaLog***.
 
 ## Features and Usage
 
-### Start an Inventory Database
+### Start an inventory database
 
 You will to create and engage your inventory database to store details from your collection. This script will help get you started:
 
 ```sh
-$ pal build database --name <datatbase_name> --location <database_location>
+$ pal build database --name < datatbase_name > --location < database_location >
 ```
-   💡 Replace `<database_name>` with the ***name*** you want to give to your art collection database and `<database_location>` with the ***url path*** on your system where the database will be stored.
+<details>
+<summary>💡 Suggestive Tip</summary>
 
-### Command Syntax and Functionality
+- Replace `< database_name >` with the ***name*** you want to give to your art collection database 
+- Replace `< database_location >` with the ***url path*** on your system where the database will be stored.
+
+</details>
+<br>
+
+### Command syntax and functionality
 
 Privisec ArtaLog provides a set of commands to interact with your art collection database.  Here are some key commands and their functionalities:
 
@@ -139,8 +148,11 @@ Privisec ArtaLog provides a set of commands to interact with your art collection
 - pal `new cart`: Start a new vendor cart for consignment arrangements.
 - pal `add to cart`: Add artworks to your vendor cart for consignment purposes.
 - pal `cancel`: Cancel an ongoing vendor cart and remove all items.
-  
-┇𐎔 Take note that the above commands are just examples, and PAL offers many more features and functionalities.<br>┇𐎔 You can refer to the _Privisec ArtaLog documentation_ or use the `pal --help` command to explore all available commands and their usage.
+
+ <sub>💡 The above commands are just examples, and PAL offers many more features and functionalities.</sub><br>
+ <sub>💡 Refer to the _Privisec ArtaLog documentation_ or use the `pal --help` command to explore all available commands and their usage.</sub>
+
+<br>
 
 ```sh
 # These are examples demonstrating the usage of the commands:
@@ -155,15 +167,15 @@ $ pal new cart --vendor "Art Gallery XYZ"
 $ pal add to cart --cartId 987654 --artworkId 123456
 $ pal cancel --cartId 987654
 ```
-#### Command Usage Variations <br> <sub>Exploring Different Scenarios</sub> 
+### Command usage variations <br> <sub>Exploring different scenarios</sub> 
 <br>
 
 <!------------------- CREATE ------------------->
-##### 🎨 create
+#### 🎨 create
 
 <blockquote>
 
-```shell
+```sh
  # creates a new entry 
 
 $ pal create --title "Innerspace" --artist "Glenn Tunstull" --date "2015" --medium "oil on canvas" --dimensions "40x30" --valuation "6,500" --description "Capturing circular motions of vibrant colors" --image "innerspace.jpg"
@@ -173,16 +185,16 @@ $ pal create --title "Innerspace" --artist "Glenn Tunstull" --date "2015" --medi
 </blockquote>
 
 <!-------------------- SHOW --------------------->
-##### 🎨 show
+#### 🎨 show
 
 <blockquote>
 
-```shell
-# find and displays the details of "Foggy Morning" from a collection
+```sh
+# find and displays the details of "Foggy Morning" from the collection
 
 $ pal show --title "Foggy Morning"
 ```
-```shell
+```sh
 # shows the detail of an item with the id, "akILjH090J"  
 
 $ pal show --id "akILjH090J"
@@ -190,11 +202,11 @@ $ pal show --id "akILjH090J"
 </blockquote>
 
 <!-------------------- LIST --------------------->
-##### 🎨 list
+#### 🎨 list
 
 <blockquote>
 
-```shell
+```sh
 # a list of all pieces from a collection
 
 $ pal list
@@ -202,7 +214,7 @@ $ pal list
 </blockquote>
 
 <!------------------- FILTER -------------------->
-##### 🎨 filter
+#### 🎨 filter
 
 <blockquote>
 
@@ -220,12 +232,12 @@ $ pal filter --artist "Gwen Tunstall"
 
 <!------------------- UPDATE -------------------->
 
-##### 🎨 update
+#### 🎨 update
 
 <blockquote>
 
 ```shell
-# adds property( medium: acrylic on canvas ) to artwork - Sunset Serenade
+# adds property( medium: acrylic on canvas ) to artwork "Sunset Serenade"
 
 $ pal update --title "Sunset Serenade" --medium "Acrylic on canvas"
 ```
@@ -233,7 +245,7 @@ $ pal update --title "Sunset Serenade" --medium "Acrylic on canvas"
 
 <!------------------- DELETE -------------------->
 
-##### 🎨 delete
+#### 🎨 delete
 
 <blockquote>
 
@@ -246,7 +258,7 @@ $ pal delete --title "Sunset Serenade"
 
 <!------------------ NEW CART ------------------->
 
-##### 🎨 new cart
+#### 🎨 new cart
 
 
 <blockquote>
@@ -260,7 +272,7 @@ $ pal new cart
 
 <!----------------- ADD TO CART ----------------->
 
-##### 🎨 add to cart
+#### 🎨 add to cart
 
 <blockquote>
 
@@ -273,7 +285,7 @@ $ pal add to cart --title "Sunset Serenade"
 
 <!------------------- CANCEL -------------------->
 
-##### 🎨 cancel
+#### 🎨 cancel
 
 <blockquote>
 
@@ -284,7 +296,9 @@ $ pal cancel cart
 ```
 </blockquote>
 
-<sup>Please note that a lot of features in **PAL** are still in beta. Your feedback is valuable to us as we continue to improve the application, fix issues, and add new features in future updates. **PAL** is designed to be user-friendly and accessible to both tech-savvy users and beginners alike. With the perfect alignment of my dad's request and this assignment, **PAL** emerged as a solution to alleviate the challenges and costs associated with managing and preserving art collections.</sup>
+<br>
+
+<sup>Please note that a lot of features in _PAL_ are still in beta. Your feedback is valuable to us as we continue to improve the application, fix issues, and add new features in future updates. _PAL_ is designed to be user-friendly and accessible to both tech-savvy users and beginners alike. With the perfect alignment of my dad's request and this assignment, _PAL_ emerged as a solution to alleviate the challenges and costs associated with managing and preserving art collections.</sup>
 
 ---
 <!------------------------ LEGAL DISCLAIMER ------------------------>
