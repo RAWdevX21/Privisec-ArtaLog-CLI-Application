@@ -168,7 +168,8 @@ $ pal add to cart --cartId 987654 --artworkId 123456
 $ pal cancel --cartId 987654
 ```
 ### Command usage variations <br> <sub>Exploring different scenarios</sub> 
-<br>
+
+---
 
 <!------------------- CREATE ------------------->
 #### 🎨 create
