@@ -1,67 +1,41 @@
-<!-- vscode-markdown-toc -->
-* 1. [Table of Contents](#TableofContents)
-* 2. [Foundation for Development](#FoundationforDevelopment)
-	* 2.1. [The Inception of PAL Companion](#TheInceptionofPALCompanion)
-* 3. [What is this app for?](#Whatisthisappfor)
-	* 3.1. [**Efficient inventory management made easy**](#Efficientinventorymanagementmadeeasy)
-* 4. [Getting Started](#GettingStarted)
-	* 4.1. [Download instructions](#Downloadinstructions)
-	* 4.2. [Profile setup and login](#Profilesetupandlogin)
-* 5. [Features and Usage](#FeaturesandUsage)
-	* 5.1. [Start an inventory database](#Startaninventorydatabase)
-	* 5.2. [Command syntax and functionality](#Commandsyntaxandfunctionality)
-	* 5.3. [Command usage variations <br> <sub>Exploring different scenarios</sub>](#CommandusagevariationsbrsubExploringdifferentscenariossub)
-		* 5.3.1. [🎨 create](#create)
-		* 5.3.2. [🎨 show](#show)
-		* 5.3.3. [🎨 list](#list)
-		* 5.3.4. [🎨 filter](#filter)
-		* 5.3.5. [🎨 update](#update)
-		* 5.3.6. [🎨 delete](#delete)
-		* 5.3.7. [🎨 new cart](#newcart)
-		* 5.3.8. [🎨 add to cart](#addtocart)
-		* 5.3.9. [🎨 cancel](#cancel)
-* 6. [Legal Disclaimer](#LegalDisclaimer)
-* 7. [Feedback and Support](#FeedbackandSupport)
-
-<!-- vscode-markdown-toc-config
-	numbering=false
-	autoSave=true
-	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc --># Privisec ArtaLog (PAL)
+Privisec ArtaLog (PAL)
+========================
 
 **Privisec ArtaLog ( _PAL_ )** is a revolutionary _CLI inventory management companion_ designed to provide a comprehensive and secure solution for cataloging and organizing art collections. With a strong emphasis on ***privacy*** and ***security***, PAL companion was created to meet the needs of individuals who value the protection of their art-related data and the efficient organization of their valuable assets. PAL combines the power of archiving with the artistry of organization, offering artists, collectors, and enthusiasts alike a centralized and structured experience that transforms the way art estates are managed.
 
 ---
+Table of Contents
+-----------------
 
-##  1. <a name='TableofContents'></a>Table of Contents
-
-    Introduction
-    Table of contents
-    Foundation for development
-    About the app
-    Getting started
-        Download instructions
-        Profile setup and login
-    Features and usage
-        Start an inventory database
-        Command syntax and functionality
-        Command Usage Variations:
-              create
-              show
-              list
-              filter
-              update
-              delete
-              new cart
-              add to cart
-              cancel
-    Legal disclaimer
-    Feedback and support
+- [Privisec ArtaLog (PAL)](#privisec-artalog-pal)
+  - [Table of Contents](#table-of-contents)
+  - [Foundation for Development](#foundation-for-development)
+      - [The Inception of PAL Companion](#the-inception-of-pal-companion)
+    - [What is this app for?](#what-is-this-app-for)
+      - [Efficient inventory management made easy](#efficient-inventory-management-made-easy)
+  - [Getting Started](#getting-started)
+    - [Requirements](#requirements)
+    - [Profile setup and login](#profile-setup-and-login)
+  - [Features and Usage](#features-and-usage)
+    - [Start an inventory database](#start-an-inventory-database)
+    - [Command syntax and functionality](#command-syntax-and-functionality)
+    - [Command usage variations  Exploring different scenarios](#command-usage-variations--exploring-different-scenarios)
+      - [🎨 create](#-create)
+      - [🎨 show](#-show)
+      - [🎨 list](#-list)
+      - [🎨 filter](#-filter)
+      - [🎨 update](#-update)
+      - [🎨 delete](#-delete)
+      - [🎨 new cart](#-new-cart)
+      - [🎨 add to cart](#-add-to-cart)
+      - [🎨 cancel](#-cancel)
+  - [License](#license)
+  - [Feedback and Support](#feedback-and-support)
 
 ---
-##  2. <a name='FoundationforDevelopment'></a>Foundation for Development
-
-###  2.1. <a name='TheInceptionofPALCompanion'></a>The Inception of PAL Companion
+Foundation for Development
+--------------------------
+#### The Inception of PAL Companion
 
 Privisec ArtaLog companion was initially conceived as a solution to the challenges faced by my dads, who are passionate art enthusiasts. Inspired by my one of my dads, a celebrated artist and illustrator known for his captivating fashion sketches from since the '70s, PAL is designed to simplify the management process for a collection of artwork. With overflowing bins of sketches in his studio and a rich archive of artworks from various established artists and friends, the need for an efficient inventory management system became evident.
 <details>
@@ -80,12 +54,12 @@ Managing a sizeable art collection can be a daunting task, but the <strong>PAL c
 <br>
 
 ---
-##  3. <a name='Whatisthisappfor'></a>What is this app for?
+### What is this app for?
 
 **Privisec Artalog** is the result of our commitment to providing an efficient inventory management system without the hefty price tag. It empowers you to document and track essential information for each artwork in your collection. From artists and titles to mediums, dimensions, descriptions, and even appraisal valuations, the _**PAL** companion_ covers it all.
 We've also introduced the innovative "vendor cart" system, streamlining consignment arrangements. The vendor's cart allows consignees to build transactional orders for requested items, which are then submitted to you for approval. Set pricing outlines, specify commission structures, and define payment methods—all with ease and flexibility.
 
-###  3.1. <a name='Efficientinventorymanagementmadeeasy'></a>**Efficient inventory management made easy**
+#### Efficient inventory management made easy
 
 PAL is here to revolutionize the way you manage your art collection. With the artistry of organization and the utmost focus on privacy and security, PAL offers a seamless and structured experience tailored to your needs. Say goodbye to the chaos of managing your art estate and say hello to effortless documentation, tracking, and organization.
 Get ready to unleash the full potential of your art collection with the **Privisec ArtaLog** companion.
@@ -95,9 +69,9 @@ Get ready to unleash the full potential of your art collection with the **Privis
 <br>
 
 ---
-##  4. <a name='GettingStarted'></a>Getting Started
-
-###  4.1. <a name='Downloadinstructions'></a>Download instructions
+Getting Started
+---------------
+### Requirements
 
 To install _**Privisec ArtaLog** companion_ on your local machine, follow these steps:</p>
 
@@ -125,7 +99,8 @@ To install _**Privisec ArtaLog** companion_ on your local machine, follow these 
    $ pal launch setup
    ```
 
-###  4.2. <a name='Profilesetupandlogin'></a>Profile setup and login
+### Profile setup and login
+
 Get started here with ***Privisec ArtaLog***.
 
 1. Run this script to create a secure user profile.
@@ -146,9 +121,9 @@ Get started here with ***Privisec ArtaLog***.
 
 ---
 
-##  5. <a name='FeaturesandUsage'></a>Features and Usage
-
-###  5.1. <a name='Startaninventorydatabase'></a>Start an inventory database
+Features and Usage
+------------------
+### Start an inventory database
 
 You will to create and engage your inventory database to store details from your collection. This script will help get you started:
 
@@ -164,7 +139,7 @@ $ pal build database --name < datatbase_name > --location < database_location >
 </details>
 <br>
 
-###  5.2. <a name='Commandsyntaxandfunctionality'></a>Command syntax and functionality
+### Command syntax and functionality
 
 Privisec ArtaLog provides a set of commands to interact with your art collection database.  Here are some key commands and their functionalities:
 
@@ -196,12 +171,12 @@ $ pal new cart --vendor "Art Gallery XYZ"
 $ pal add to cart --cartId 987654 --artworkId 123456
 $ pal cancel --cartId 987654
 ```
-###  5.3. <a name='CommandusagevariationsbrsubExploringdifferentscenariossub'></a>Command usage variations <br> <sub>Exploring different scenarios</sub> 
+### Command usage variations <br> <sub>Exploring different scenarios</sub> 
 
 ---
 
 <!------------------- CREATE ------------------->
-####  5.3.1. <a name='create'></a>🎨 create
+####  <a name='create'></a>🎨 create
 
 <blockquote>
 
@@ -215,7 +190,7 @@ $ pal create --title "Innerspace" --artist "Glenn Tunstull" --date "2015" --medi
 </blockquote>
 
 <!-------------------- SHOW --------------------->
-####  5.3.2. <a name='show'></a>🎨 show
+####  <a name='show'></a>🎨 show
 
 <blockquote>
 
@@ -232,7 +207,7 @@ $ pal show --id "akILjH090J"
 </blockquote>
 
 <!-------------------- LIST --------------------->
-####  5.3.3. <a name='list'></a>🎨 list
+####  <a name='list'></a>🎨 list
 
 <blockquote>
 
@@ -244,7 +219,7 @@ $ pal list
 </blockquote>
 
 <!------------------- FILTER -------------------->
-####  5.3.4. <a name='filter'></a>🎨 filter
+####  <a name='filter'></a>🎨 filter
 
 <blockquote>
 
@@ -262,7 +237,7 @@ $ pal filter --artist "Gwen Tunstall"
 
 <!------------------- UPDATE -------------------->
 
-####  5.3.5. <a name='update'></a>🎨 update
+####  <a name='update'></a>🎨 update
 
 <blockquote>
 
@@ -275,7 +250,7 @@ $ pal update --title "Sunset Serenade" --medium "Acrylic on canvas"
 
 <!------------------- DELETE -------------------->
 
-####  5.3.6. <a name='delete'></a>🎨 delete
+####  <a name='delete'></a>🎨 delete
 
 <blockquote>
 
@@ -288,7 +263,7 @@ $ pal delete --title "Sunset Serenade"
 
 <!------------------ NEW CART ------------------->
 
-####  5.3.7. <a name='newcart'></a>🎨 new cart
+####  <a name='newcart'></a>🎨 new cart
 
 
 <blockquote>
@@ -302,7 +277,7 @@ $ pal new cart
 
 <!----------------- ADD TO CART ----------------->
 
-####  5.3.8. <a name='addtocart'></a>🎨 add to cart
+####  <a name='addtocart'></a>🎨 add to cart
 
 <blockquote>
 
@@ -315,7 +290,7 @@ $ pal add to cart --title "Sunset Serenade"
 
 <!------------------- CANCEL -------------------->
 
-####  5.3.9. <a name='cancel'></a>🎨 cancel
+####  <a name='cancel'></a>🎨 cancel
 
 <blockquote>
 
@@ -332,13 +307,17 @@ $ pal cancel cart
 
 ---
 <!------------------------ LEGAL DISCLAIMER ------------------------>
-##  6. <a name='LegalDisclaimer'></a>Legal Disclaimer
+License
+-------
+
+See [MIT LICENSE](https://github.com/ekalinin/github-markdown-toc.go/blob/master/LICENSE)
+file.
 
 <sup><u>Please review the following:</u></sup>
 <blockquote style="font-size: 11px;">
 <p style="margin-bottom: -10px;font-size: 18px; font-weight: bold; color: goldenRod;">
 <img src="assets/disclaimer-icon-dk.png" alt="A disclaimer icon">
-D<span style="font-size: 13px;">ISCLAIMER</span></p></sup>
+D<span style="font-size: 13px;">ISCLAIMER</span></p>
 
 ---
 
@@ -364,4 +343,5 @@ Please refer to the governing law of your jurisdiction that will apply in case o
 
 ---
 <!----------------------- FEEDBACK & SUPPORT ----------------------->
-##  7. <a name='FeedbackandSupport'></a>Feedback and Support
+Feedback and Support
+--------------------

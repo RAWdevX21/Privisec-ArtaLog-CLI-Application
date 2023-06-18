@@ -1,3 +1,4 @@
 {
-    "workbench.list.multiSelectModifier": "alt"
+    "workbench.list.multiSelectModifier": "alt",
+    "markdown.extension.toc.omittedFromToc": {}
 }
